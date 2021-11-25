@@ -12,10 +12,10 @@ Object.entries(constants).forEach(([_key, _value]) => {
   base = base.replaceAll(key, value);
 });
 
-export default async function (invite: APIInvite) {
+export default async function (invite: APIInvite, query: any) {
   const config = {
-    join: "Join",
-    text: "You've been invited to join a server"
+    join: typeof query.join === "string" ? query.join : "Join",
+    text: typeof query.text === "string" ? query.text : "You've been invited to join a server"
   };
 
   const TEXT = whitneyBold(constants.TEXT_SIZE, config.text.toUpperCase());

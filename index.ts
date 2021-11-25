@@ -26,7 +26,7 @@ app.get("/invite/:code", async (req, res) => {
     return;
   }
 
-  const svg = await renderInvite(invite);
+  const svg = await renderInvite(invite, req.query);
   res.contentType("image/svg+xml");
   res.send(svg);
 });
