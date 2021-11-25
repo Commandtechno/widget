@@ -1,0 +1,82 @@
+<svg x="{X}" y="{Y}" width="{WIDTH}" height="{HEIGHT}" xmlns="http://www.w3.org/2000/svg">
+  <!-- icon clip -->
+  <defs>
+    <clipPath xmlns="http://www.w3.org/2000/svg" id="icon">
+      <rect x="{ICON_X}" y="{ICON_Y}" width="{ICON_WIDTH}" height="{ICON_HEIGHT}" rx="{ICON_RADIUS}"
+        ry="{ICON_RADIUS}" />
+    </clipPath>
+  </defs>
+
+  <!-- background -->
+  <rect width="{WIDTH}" height="{HEIGHT}" rx="{RADIUS}" fill="{BACKGROUND}"></rect>
+
+  <!-- content -->
+  <svg x="{CONTENT_X}" y="{CONTENT_Y}" width="{CONTENT_WIDTH}" height="{CONTENT_HEIGHT}"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- text -->
+    <svg x="{TEXT_X}" y="{TEXT_Y}" width="{TEXT_WIDTH}" height="{TEXT_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
+      <path xmlns="http://www.w3.org/2000/svg" d="[TEXT]" fill="{TEXT_COLOR}" />
+    </svg>
+
+    <!-- server -->
+    <svg x="{SERVER_X}" y="{SERVER_Y}" width="{SERVER_WIDTH}" height="{SERVER_HEIGHT}"
+      xmlns="http://www.w3.org/2000/svg">
+      <!-- icon -->
+      <image x="{ICON_X}" y="{ICON_Y}" width="{ICON_WIDTH}" height="{ICON_HEIGHT}" href="[ICON]" clip-path="url(#icon)">
+      </image>
+
+      <!-- info -->
+      <svg x="{INFO_X}" y="{INFO_Y}" width="{INFO_WIDTH}" height="{INFO_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
+        <!-- name -->
+        <svg x="{NAME_X}" y="{NAME_Y}" width="{NAME_WIDTH}" height="{NAME_HEIGHT}" xlmns="http://www.w3.org/2000/svg">
+          <path xmlns="http://www.w3.org/2000/svg" d="[NAME]" fill="{NAME_COLOR}" />
+        </svg>
+
+        <!-- counts -->
+        <svg x="{COUNTS_X}" y="{COUNTS_Y}" width="{COUNTS_WIDTH}" height="{COUNTS_HEIGHT}"
+          xlmns="http://www.w3.org/2000/svg">
+          <!-- online -->
+          <svg x="{ONLINE_X}" y="{ONLINE_Y}" width="{ONLINE_WIDTH}" height="{ONLINE_HEIGHT}">
+            <!-- online dot -->
+            <svg x="{ONLINE_DOT_X}" y="{ONLINE_DOT_Y}" width="{ONLINE_DOT_WIDTH}" height="{ONLINE_DOT_HEIGHT}"
+              xlmns="http://www.w3.org/2000/svg">
+              <circle cx="{ONLINE_DOT_RADIUS}" cy="{ONLINE_DOT_RADIUS}" r="{ONLINE_DOT_RADIUS}"
+                fill="{ONLINE_DOT_COLOR}"></circle>
+            </svg>
+
+            <!-- online text -->
+            <svg x="{ONLINE_TEXT_X}" y="[ONLINE_TEXT_Y]" width="{ONLINE_TEXT_WIDTH}" height="{ONLINE_TEXT_HEIGHT}"
+              xlmns="http://www.w3.org/2000/svg">
+              <path xmlns="http://www.w3.org/2000/svg" d="[ONLINE]" fill="{ONLINE_TEXT_COLOR}" />
+            </svg>
+          </svg>
+
+          <!-- total -->
+          <svg x="[TOTAL_X]" y="{TOTAL_Y}" width="{TOTAL_WIDTH}" height="{TOTAL_HEIGHT}">
+            <!-- total dot -->
+            <svg x="{TOTAL_DOT_X}" y="{TOTAL_DOT_Y}" width="{TOTAL_DOT_WIDTH}" height="{TOTAL_DOT_HEIGHT}"
+              xlmns="http://www.w3.org/2000/svg">
+              <circle cx="{TOTAL_DOT_RADIUS}" cy="{TOTAL_DOT_RADIUS}" r="{TOTAL_DOT_RADIUS}" fill="{TOTAL_DOT_COLOR}">
+              </circle>
+            </svg>
+
+            <!-- total text -->
+            <svg x="{TOTAL_TEXT_X}" y="[TOTAL_TEXT_Y]" width="{TOTAL_TEXT_WIDTH}" height="{TOTAL_TEXT_HEIGHT}"
+              xlmns="http://www.w3.org/2000/svg">
+              <path xmlns="http://www.w3.org/2000/svg" d="[TOTAL]" fill="{TOTAL_TEXT_COLOR}" />
+            </svg>
+          </svg>
+        </svg>
+
+        <!-- join -->
+        <svg x="[JOIN_X]" y="{JOIN_Y}" width="[JOIN_WIDTH]" height="{JOIN_HEIGHT}">
+          <rect width="[JOIN_WIDTH]" height="{JOIN_HEIGHT}" rx="{JOIN_RADIUS}" fill="{JOIN_COLOR}"></rect>
+          <!-- join text -->
+          <svg x="[JOIN_TEXT_X]" y="[JOIN_TEXT_Y]" width="{JOIN_TEXT_WIDTH}" height="{JOIN_TEXT_HEIGHT}">
+            <path xmlns="http://www.w3.org/2000/svg" d="[JOIN]" fill="{JOIN_TEXT_COLOR}" />
+          </svg>
+        </svg>
+      </svg>
+    </svg>
+  </svg>
+</svg>
